@@ -1,0 +1,33 @@
+												Big O Notation
+
+alist = [1,2,4,1]
+sum = 0
+for i in alist:
+	sum = sum + i
+print(sum)
+
+
+so N equals the length of the list.
+
+using the above as example, N = 4
+
+now using this, we need to find out how many actions there are, relative to the amount of input (list) there are. 
+
+so there are 3 actions running above per each object in the list, so N is equal to 4 * 3. So Big O Notation would be: O(7)
+
+so if you were to run something like this multiplication table:
+
+alist = [1,2,3,4,5,6,7,8,9,10]
+for j in alist:
+	for i in alist:
+		print(i*j)
+
+So N is 10 (there are 10 items in the list)
+
+The program will be running 10 times per object, so there are 100 actions.
+
+The Big O Notation would then be O(N^2).
+
+if there are too many actions being applied to a data set (list) that is too long, then the program may not run or take too long to run.
+
+Your goal is to keep N as small as possible.
