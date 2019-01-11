@@ -2,34 +2,31 @@ def NumberFinder(x,y):
 	flag = True
 	start = 0
 	end = len(x)-1
-	middle = giint((start + end)//2)
+	middle = int((start + end)//2)
 	count = 0
 	while flag == True:
 		length = len(x)-1
-		print(length)
-		for i in range(len(x)-1):
+		for i in range(len(x)):
 			if y > x[length]:
-				print("Your number {} is too long!".format(y))
+				print("Your number, {}, is too long!".format(y))
 				flag = False
 				break
 			elif x[i] == y:
-				print("Your magic number was {}".format(y))
+				print("Your magic number was {}.".format(y))
 				print("It took me {} tries to guess your number.".format(count))
-				flag = False
-				
+				flag = False	
 			else:
 				if y > middle:
 					end = middle + 1
 					count += 1
 				elif y > x[length]:
-					break
+					flag = False
 				else:
 					start = middle - 1
 					count += 1
-	return
 
 user_lists = input("Enter a list of numbers:\n> ")
-user_lists.split(user_lists)
+user_lists.split()
 user_list = []
 for i in user_lists:
 	if i != " ":
